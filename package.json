@@ -1,0 +1,24 @@
+{
+  "name": "last-successful-run-number-action",
+  "version": "1.0.0",
+  "description": "This action returns the run number for the last successful run of a specified workflow.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nabil-hassan/last-successful-run-number-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nabil-hassan/last-successful-run-number-action/issues"
+  },
+  "homepage": "https://github.com/nabil-hassan/last-successful-run-number-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  }
+}
