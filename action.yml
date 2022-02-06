@@ -1,0 +1,19 @@
+name: 'Last successful run number'
+description: 'This action returns the run number for the last successful run of a specified workflow.'
+inputs:
+  token:
+    description: 'The GitHub access token.'
+    required: true
+  branch:
+    description: 'Branch the workflow ran against.'
+    required: true
+    default: 'main'
+  workflow_id:
+    description: 'ID or filename of the workflow.'
+    required: true
+outputs:
+  run_number:
+    description: 'The number of the last successful workflow run.'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
