@@ -4,6 +4,7 @@ const github = require("@actions/github");
 try {
     const octo = github.getOctokit(core.getInput("token"));
     const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
+    console.log("Fetching workflow runs")
     octo.rest.actions.listWorkflowRuns({
         owner, repo,
         workflow_id: core.getInput("workflow_id"),
