@@ -8477,7 +8477,7 @@ try {
     const workflow_id = core.getInput("workflow_id");
     const branch = core.getInput("branch");
 
-    console.log("Fetching workflow runs for workflow: ${workflow_id} and branch: ${branch}.");
+    console.log(`Fetching run number for workflow: ${workflow_id},  branch: ${branch}, owner: ${owner} and repo: ${repo}.`);
     
     octo.rest.actions.listWorkflowRuns({
         owner, repo,
@@ -8490,7 +8490,7 @@ try {
             ? res.data.workflow_runs[0].run_number : "";
         core.setOutput("run_number", run_number);
     }).catch((e) => {
-        console.log("Unable to fetch workflow run number");
+        console.log(`Unable to fetch workflow run number: ${e}`);
         core.setFailed(e.message);
     });
 } catch (e) {
